@@ -20,8 +20,8 @@ RUN apt-get update \
         libc-client-dev \
         libkrb5-dev \
         ssh \
-    && pecl install imagick \
-    && docker-php-ext-enable imagick \
+    && pecl install imagick xdebug \
+    && docker-php-ext-enable imagick xdebug \
     && docker-php-ext-install -j$(nproc) iconv mcrypt zip intl xmlrpc bcmath soap mbstring \
     && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
     && docker-php-ext-install -j$(nproc) gd \
