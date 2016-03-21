@@ -2,10 +2,12 @@ language: bash
 services: docker
 
 before_script:
+  - image55="melkorm/php-docker:5.5"
   - image56="melkorm/php-docker:5.6"
   - image70="melkorm/php-docker:7.0"
 
 script:
+  - docker build -t "$image56" ./5.5/
   - docker build -t "$image56" ./5.6/
   - docker build -t "$image70" ./7.0/
 
