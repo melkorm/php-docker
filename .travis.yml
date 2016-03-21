@@ -7,7 +7,7 @@ before_script:
   - image70="melkorm/php-docker:7.0"
 
 script:
-  - docker build -q -t "$image56" ./5.5/
+  - docker build -q -t "$image55" ./5.5/
   - docker build -q -t "$image56" ./5.6/
   - docker build -q -t "$image70" ./7.0/
 
