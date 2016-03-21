@@ -1,8 +1,8 @@
 # Supported tags and respective Dockerfile links
 
-- [`latest`, `7.0-alpha`, (7.0/Dockerfile)][1]
-- [`latest`, `5.6-alpha`, (5.6/Dockerfile)][2]
-- [`latest`, `5.5-alpha`, (5.5/Dockerfile)][3]
+- [`7.0`, (7.0/Dockerfile)][1]
+- [`5.6`, (5.6/Dockerfile)][2]
+- [`5.5`, (5.5/Dockerfile)][3]
 
 [![](https://badge.imagelayers.io/melkorm/php-docker:latest.svg)](https://imagelayers.io/?images=melkorm/php-docker:latest 'Get your own badge on imagelayers.io')
 [![Build Status](https://api.travis-ci.org/melkorm/php-docker.svg?branch=master)](https://travis-ci.org/melkorm/php-docker)
