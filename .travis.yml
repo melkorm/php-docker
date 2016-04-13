@@ -7,7 +7,7 @@ env:
   - DOCKER_IMAGE="./7.0/"
 
 script:
-  - docker build -q "DOCKER_IMAGE"
+  - docker build -q "$DOCKER_IMAGE"
 
 after_script:
   - docker images
