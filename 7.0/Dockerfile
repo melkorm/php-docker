@@ -23,14 +23,13 @@ RUN apt-get update \
         libc-client-dev \
         libkrb5-dev \
         ssh \
-    && pecl install imagick xdebug \
-    && pecl install ssh2 channel://pecl.php.net/ssh2-0.11.3 \
-    && docker-php-ext-enable imagick xdebug ssh2 \
-    && docker-php-ext-install -j$(nproc) iconv mcrypt zip intl xmlrpc bcmath soap mbstring \
     && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
     && docker-php-ext-configure imap --with-kerberos --with-imap-ssl \
-    && docker-php-ext-install -j$(nproc) gd \
-    && docker-php-ext-install imap \
+    && docker-php-ext-install -j$(nproc) gd imap \
+    && pecl install imagick xdebug \
+    && pecl install ssh2-1.0 \
+    && docker-php-ext-enable imagick xdebug ssh2 \
+    && docker-php-ext-install -j$(nproc) iconv mcrypt zip intl xmlrpc bcmath soap mbstring \
     && rm -r /var/lib/apt/lists/* \
     && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
     && service ssh start
